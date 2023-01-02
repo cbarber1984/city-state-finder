@@ -1,4 +1,4 @@
-# JS30 City State Finder#
+# JS30 City State Finder #
 
 Checkout the deployed app [HERE]()
 
