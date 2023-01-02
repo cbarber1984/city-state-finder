@@ -36,7 +36,7 @@ function displayMatches() {
         </li>`
     }).join(' ');
     
-    //set the display the 'initialText' only when the input box is empty, i.e., when this.value is false. Display results otherwise.
+    //set the display to 'initialText' only when the input box is empty, i.e., when this.value is false. Display results otherwise.
     //Used the ternary operator here. Same can be done with an if-else block.
     suggestions.innerHTML = this.value ? html : initialText;
 }
