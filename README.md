@@ -1,6 +1,6 @@
 # JS30 City State Finder #
 
-Checkout the deployed app [HERE]()
+Checkout the deployed app [HERE](https://cbarber1984.github.io/js30-city-state-finder/)
 
 ## Objective ##
 - Use `fetch` to get data
