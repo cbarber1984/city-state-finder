@@ -20,6 +20,9 @@ function numberWithCommas(x) {
 }
 
 function displayMatches() {
+    
+    const initialText = '<ul class="suggestions"><li>Filter for a city</li><li>or a state</li></ul>';
+    
     const matchArray = findMatches(this.value, cities);
 
     const html = matchArray.map(place => {
@@ -31,7 +34,7 @@ function displayMatches() {
             <span class="population">${numberWithCommas(place.population)}</span>
         </li>`
     }).join(' ');
-    suggestions.innerHTML = html;    
+    suggestions.innerHTML = this.value ? html : initialText;
 }
 
 const searchInput = document.querySelector('.search');
