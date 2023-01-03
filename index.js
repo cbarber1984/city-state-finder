@@ -20,6 +20,10 @@ function numberWithCommas(x) {
 }
 
 function displayMatches() {
+    
+    //Text to be displayed when the input form is empty
+    const initialText = '<ul class="suggestions"><li>Filter for a city</li><li>or a state</li></ul>';
+    
     const matchArray = findMatches(this.value, cities);
 
     const html = matchArray.map(place => {
@@ -31,7 +35,10 @@ function displayMatches() {
             <span class="population">${numberWithCommas(place.population)}</span>
         </li>`
     }).join(' ');
-    suggestions.innerHTML = html;    
+    
+    //set the display to 'initialText' only when the input box is empty, i.e., when this.value is false. Display results otherwise.
+    //Used the ternary operator here. Same can be done with an if-else block.
+    suggestions.innerHTML = this.value ? html : initialText;
 }
 
 const searchInput = document.querySelector('.search');
